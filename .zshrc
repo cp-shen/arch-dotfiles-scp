@@ -15,10 +15,8 @@ bindkey '^[[Z' reverse-menu-complete # enable shift-tab
 alias du="du -h"
 alias gvim="nvim-qt --no-ext-tabline"
 alias i3exit="i3-msg exit"
-alias l="ls -hF"
-alias la="ls -ahF"
-alias ll="ls -alhF"
-alias lr="ls -alRhF"
+alias l="ls -hlF --color=auto"
+alias la="ls -ahlF --color=auto"
 alias mkd="mkdir -p"
 alias nv="nvim"
 alias psuser="ps -F -u $USER"
@@ -29,11 +27,16 @@ alias rm="rm -i"
 alias szshrc="source ~/.zshrc"
 
 
-# function to open search in archwiki
+# functions to open search in archwiki and arch manual
 archwiki(){ 
-  firefox "wiki.archlinux.org/index.php?search=$1"
+  firefox "https://wiki.archlinux.org/index.php?search=$1"
 }
-
+archman(){
+  firefox "https://man.archlinux.org/search?lang=en&q=$1"
+}
+archfindpkg(){
+  firefox "https://archlinux.org/packages/?name=$1"
+}
 
 # enable prompt theme and completion
 autoload -Uz compinit promptinit
@@ -83,4 +86,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd --hidden -E ".cache" -E ".git" -E "tags" -td -- . $HOME'
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ]   && source /usr/share/fzf/completion.zsh
+
+# colored man page (disabled: using grml config)
+# export MANPAGER="less -R --use-color -Dd+r -Du+g"
 
