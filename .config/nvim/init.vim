@@ -40,3 +40,14 @@ set foldlevel=2
 set termguicolors
 
 colo spacegray
+
+if isdirectory(expand("~/.vim"))
+    set packpath+=~/.vim,
+endif
+
+if filereadable(expand("~/.vimrc"))
+    source ~/.vimrc
+endif
+
+let s:conf_dir=stdpath('config')."/myconf/"
+execute "source" s:conf_dir . "plugs.vim"
