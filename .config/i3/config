@@ -2,11 +2,11 @@
     set $mod Mod4
     set $md mode "default"
     
-    set $ws1        1: term-main
-    set $ws2        2: term-sub
-    set $ws3        3: browser
-    set $ws4        4: music
-    set $ws5        5: others
+    set $ws1        1: terminal
+    set $ws2        2: browser
+    set $ws3        3: music
+    set $ws4        4: others
+    set $ws5        5
     set $ws6        6
     set $ws7        7
     set $ws8        8
@@ -29,15 +29,15 @@
     bindsym $mod+o mode "launcher"
     mode "launcher" {
         bindsym t workspace number $ws1 ; exec $my_terminal ; $md
-        bindsym e workspace number $ws2 ; exec $my_file_manager ; $md
-        bindsym w workspace number $ws3 ; exec $my_browser ; $md 
-        bindsym m workspace number $ws4 ; exec $my_music_player ; $md
+        bindsym e workspace number $ws1 ; exec $my_file_manager ; $md
+        bindsym w workspace number $ws2 ; exec $my_browser ; $md 
+        bindsym m workspace number $ws3 ; exec $my_music_player ; $md
         bindsym Escape $md
     }
 
 # application shortcuts
     # bindsym --release $mod+Shift+Control+q exec xkill
-    bindsym $mod+Return workspace number $ws2 ; exec $my_terminal
+    bindsym $mod+Return workspace number $ws1 ; exec $my_terminal
 
 # i3 management
     # reload the configuration file
