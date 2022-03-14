@@ -45,7 +45,7 @@
     # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
     bindsym $mod+Shift+r restart
     # exit i3 (logs you out of your X session)
-    # bindsym $mod+Shift+e exit
+    bindsym $mod+Shift+Control+e exit
 
 # layout management
     # change container layout (stacked, tabbed, toggle split)
@@ -172,7 +172,8 @@ bar {
 }
 
 # set window gaps and borders
-    for_window [all] border normal 1
+    default_border normal 1
+#    for_window [class=$my_browser_class] border pixel 1
     gaps inner 10
 
 # border and title bar colors
