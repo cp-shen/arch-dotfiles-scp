@@ -22,6 +22,7 @@ command=zsh -c 'print -P "hello, %n@%m :)" '
 interval=once
 
 [time]
+color=#cccccc
 # command=date '+%Y-%m-%d %H:%M:%S'
 command=date '+%Y-%m-%d %H:%M'
 interval=30
