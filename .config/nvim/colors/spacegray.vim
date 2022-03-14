@@ -59,10 +59,10 @@ hi String          ctermbg=NONE ctermfg=107    guibg=NONE     guifg=#95B47B  cte
 hi Type            ctermbg=NONE ctermfg=179    guibg=NONE     guifg=#E5C078  cterm=NONE      gui=NONE
 
 hi Cursor          ctermbg=fg   ctermfg=bg     guibg=fg       guifg=bg       cterm=NONE      gui=NONE
-hi CursorColumn    ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
-hi CursorLine      ctermbg=0    ctermfg=NONE   guibg=#303030  guifg=NONE     cterm=NONE      gui=NONE
-hi ColorColumn     ctermbg=235  ctermfg=NONE   guibg=#303537  guifg=NONE     cterm=NONE      gui=NONE
-hi SignColumn      ctermbg=233  ctermfg=250    guibg=#141617  guifg=#B3B8C4  cterm=NONE      gui=NONE
+hi CursorColumn    ctermbg=0    ctermfg=NONE   guibg=#21252b  guifg=NONE     cterm=NONE      gui=NONE
+hi CursorLine      ctermbg=0    ctermfg=NONE   guibg=#21252b  guifg=NONE     cterm=NONE      gui=NONE
+hi ColorColumn     ctermbg=235  ctermfg=NONE   guibg=#21252b  guifg=NONE     cterm=NONE      gui=NONE
+hi SignColumn      ctermbg=233  ctermfg=250    guibg=#21252b  guifg=#B3B8C4  cterm=NONE      gui=NONE
 
 hi Todo            ctermbg=NONE ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=reverse   gui=reverse
 hi Error           ctermbg=52   ctermfg=12     guibg=NONE     guifg=#AF5F5F  cterm=underline gui=reverse
@@ -91,32 +91,26 @@ hi PmenuThumb      ctermbg=235  ctermfg=137    guibg=NONE     guifg=#171717  cte
 hi WildMenu        ctermbg=110  ctermfg=235    guibg=#8FAFD7  guifg=#141617  cterm=bold      gui=bold
 
 if g:spacegray_low_contrast
-  hi StatusLine         ctermbg=236 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
-  hi StatusLineTerm     ctermbg=236 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
-  hi TablineSel         ctermbg=236 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
-  hi TablineFill        ctermbg=236 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
+  hi StatusLine         ctermbg=236 ctermfg=249 guibg=#21252b guifg=#B3B8C4 cterm=NONE   gui=NONE
+  hi TablineSel         ctermbg=236 ctermfg=249 guibg=#21252b guifg=#B3B8C4 cterm=NONE   gui=NONE
+  hi TablineFill        ctermbg=236 ctermfg=249 guibg=#21252b guifg=#B3B8C4 cterm=NONE   gui=NONE
   if g:spacegray_use_italics
-    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
-    hi StatusLineTermNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
-    hi Tabline          ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
+    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=italic gui=italic
+    hi Tabline          ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=italic gui=italic
   else
-    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
-    hi StatusLineTermNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
-    hi Tabline          ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
+    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=NONE   gui=NONE
+    hi Tabline          ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=NONE   gui=NONE
   endif
 else
-  hi StatusLine         ctermbg=235 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
-  hi StatusLineTerm     ctermbg=235 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
-  hi TablineSel         ctermbg=235 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
-  hi TablineFill        ctermbg=235 ctermfg=249 guibg=#303537 guifg=#B3B8C4 cterm=NONE   gui=NONE
+  hi StatusLine         ctermbg=235 ctermfg=249 guibg=#21252b guifg=#B3B8C4 cterm=NONE   gui=NONE
+  hi TablineSel         ctermbg=235 ctermfg=249 guibg=#21252b guifg=#B3B8C4 cterm=NONE   gui=NONE
+  hi TablineFill        ctermbg=235 ctermfg=249 guibg=#21252b guifg=#B3B8C4 cterm=NONE   gui=NONE
   if g:spacegray_use_italics
-    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
-    hi StatusLineTermNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
-    hi Tabline          ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=italic gui=italic
+    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=italic gui=italic
+    hi Tabline          ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=italic gui=italic
   else
-    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
-    hi StatusLineTermNC ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
-    hi Tabline          ctermbg=232 ctermfg=239 guibg=#1C1F20 guifg=#7C7F88 cterm=NONE   gui=NONE
+    hi StatusLineNC     ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=NONE   gui=NONE
+    hi Tabline          ctermbg=232 ctermfg=239 guibg=#21252b guifg=#7C7F88 cterm=NONE   gui=NONE
   endif
 endif
 
@@ -126,7 +120,7 @@ hi Ignore          ctermbg=NONE ctermfg=250    guibg=NONE     guifg=#BCBCBC  cte
 hi Visual          ctermbg=233  ctermfg=4      guibg=#111314  guifg=#6E9CAF  cterm=reverse   gui=reverse
 hi VisualNOS       ctermbg=8    ctermfg=NONE   guibg=NONE     guifg=NONE     cterm=bold      gui=bold
 
-hi FoldColumn      ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
+hi FoldColumn      ctermbg=NONE ctermfg=242    guibg=#21252b  guifg=#6C6C6C  cterm=NONE      gui=NONE
 hi Folded          ctermbg=NONE ctermfg=242    guibg=#1C1C1C  guifg=#6C6C6C  cterm=NONE      gui=NONE
 
 hi VertSplit       ctermbg=232  ctermfg=232    guibg=#21252b  guifg=#21252b  cterm=NONE      gui=NONE

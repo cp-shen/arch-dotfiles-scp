@@ -37,10 +37,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-set termguicolors
-
-colo spacegray
-
 " if isdirectory(expand("~/.vim"))
 "     set packpath+=~/.vim,
 " endif
@@ -51,4 +47,5 @@ colo spacegray
 let s:conf_dir=stdpath('config')."/myconf/"
 execute "source" s:conf_dir . "plugs.vim"
 execute "source" s:conf_dir . "keys.vim"
+execute "source" s:conf_dir . "color.vim"
 
