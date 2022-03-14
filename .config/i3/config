@@ -50,13 +50,8 @@
 # layout management
     # change container layout (stacked, tabbed, toggle split)
     #bindsym $mod+s layout stacking
-    #bindsym $mod+w layout tabbed
+    bindsym $mod+Shift+w layout tabbed
     bindsym $mod+Shift+x layout toggle split
-
-    # split in horizontal orientation
-    #bindsym $mod+Shift+h split h
-    # split in vertical orientation
-    #bindsym $mod+Shift+v split v
 
 # Font setting
     font pango:Fira Code 10
@@ -155,27 +150,38 @@
 
 # i3bar settings
 bar {
+    mode dock
     font pango:Fira Code 10
     position top
     status_command i3blocks
     tray_output none
+    binding_mode_indicator yes
     colors {
         # background #000000
         background #1e1e1e
-        statusline #ffffff
+        statusline #eeeeee
         separator #666666
 
-        focused_workspace  #4c7899 #285577 #ffffff
-        active_workspace   #333333 #5f676a #ffffff
+                           #border #bg     #text 
+        focused_workspace  #4c7899 #285577 #eeeeee
+        active_workspace   #333333 #5f676a #eeeeee
         inactive_workspace #333333 #222222 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
+        urgent_workspace   #2f343a #900000 #eeeeee
+        binding_mode       #2f343a #900000 #eeeeee
     }
 }
 
 # set window gaps and borders
-    for_window [all] border normal 0
+    for_window [all] border normal 1
     gaps inner 10
+
+# border and title bar colors
+    # class                 border  backgr. text    indicator child_border
+    client.focused          #4c7899 #222222 #eeeeee #484e50   #222222
+    client.focused_inactive #333333 #5f676a #eeeeee #292d2e   #222222
+    client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+    client.urgent           #2f343a #900000 #eeeeee #900000   #900000
+    client.placeholder      #000000 #0c0c0c #eeeeee #000000   #0c0c0c
 
 # startup applications
     exec --no-startup-id $my_terminal # auto spawn a terminal
