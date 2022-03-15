@@ -1,0 +1,2 @@
+#! zsh
+clash > ~/clash.log  &!
