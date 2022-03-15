@@ -18,12 +18,11 @@
     set $my_terminal       kitty
     set $my_terminal_class "(?i)kitty"
     set $my_file_manager   kitty ranger
-    set $my_music_player   kitty mpv
+    set $my_music_player   kitty mpv ~/Music/
 
 # workspace rules
-    # assign [class=$my_terminal_class] $ws2
-    # assign [class=$my_browser_class] $ws3
-    # assign [all] $ws5
+    # assign [class=$my_terminal_class] $ws1
+    # assign [class=$my_browser_class] $ws2
 
 # application laucher mode
     bindsym $mod+o mode "launcher"
