@@ -125,7 +125,7 @@ local settings = {
   --read http://docs.aegisub.org/3.2/ASS_Tags/ for reference of tags
   --undeclared tags will use default osd settings
   --these styles will be used for the whole playlist
-  style_ass_tags = "{}",
+  style_ass_tags = "{\\fnUbuntu\\fs10\\b0\\bord1}",
   --paddings from top left corner
   text_padding_x = 10,
   text_padding_y = 30,
