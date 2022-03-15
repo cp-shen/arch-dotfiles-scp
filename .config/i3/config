@@ -4,7 +4,7 @@
     
     set $ws1        1: terminal
     set $ws2        2: browser
-    set $ws3        3: music
+    set $ws3        3: music/v
     set $ws4        4: others
     set $ws5        5
     set $ws6        6
@@ -18,7 +18,7 @@
     set $my_terminal       kitty
     set $my_terminal_class "(?i)kitty"
     set $my_file_manager   kitty ranger
-    set $my_music_player   kitty cmus
+    set $my_music_player   kitty mpv
 
 # workspace rules
     # assign [class=$my_terminal_class] $ws2
@@ -172,9 +172,9 @@ bar {
 }
 
 # set window gaps and borders
-    default_border normal 1
-#    for_window [class=$my_browser_class] border pixel 1
-    gaps inner 10
+    default_border normal 3
+#    for_window [class=$my_browser_class] border pixel 3
+#    gaps inner 10
 
 # border and title bar colors
     # class                 border  backgr. text    indicator child_border
