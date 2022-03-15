@@ -113,7 +113,7 @@ local settings = {
   resolve_titles = false,
 
   --osd timeout on inactivity, with high value on this open_toggles is good to be true
-  playlist_display_timeout = 5,
+  playlist_display_timeout = 20,
 
   --amount of entries to show before slicing. Optimal value depends on font/video size etc.
   showamount = 16,
