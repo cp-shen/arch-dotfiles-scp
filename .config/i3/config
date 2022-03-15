@@ -52,6 +52,11 @@
     bindsym $mod+Shift+w layout tabbed
     bindsym $mod+Shift+x layout toggle split
 
+# volume control using pulsemixer
+    bindsym XF86AudioMute        exec --no-startup-id pulsemixer --toggle-mute
+    bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
+
 # Font setting
     font pango:Fira Code 10
 
