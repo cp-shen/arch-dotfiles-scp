@@ -11,14 +11,16 @@
     set $ws7        7
     set $ws8        8
     set $ws9        9
-    set $ws10       10
+    set $ws10       10: emacs
     
     set $my_browser        firefox
     set $my_browser_class  "(?i)firefox"
     set $my_terminal       kitty
     set $my_terminal_class "(?i)kitty"
+    set $my_editor         emacs
+    set $my_editor_class   "(?i)emacs"
     set $my_file_manager   kitty ranger
-    set $my_music_player   kitty mpv ~/Music/
+    set $my_music_player   kitty ranger ~/Music/
 
 # workspace rules
     # assign [class=$my_terminal_class] $ws1
@@ -28,7 +30,8 @@
     bindsym $mod+o mode "launcher"
     mode "launcher" {
         bindsym t workspace number $ws1 ; exec $my_terminal ; $md
-        bindsym e workspace number $ws1 ; exec $my_file_manager ; $md
+        bindsym e workspace number $ws10; exec $my_editor ; $md
+        bindsym f workspace number $ws1 ; exec $my_file_manager ; $md
         bindsym w workspace number $ws2 ; exec $my_browser ; $md 
         bindsym m workspace number $ws3 ; exec $my_music_player ; $md
         bindsym Escape $md
@@ -154,9 +157,10 @@
 
 # i3bar settings
 bar {
-    mode dock
-    font pango:Fira Code 10
     position top
+    mode dock
+    modifier $Mod+Control
+    font pango:Fira Code 10
     status_command i3blocks
     tray_output none
     binding_mode_indicator yes
@@ -176,13 +180,13 @@ bar {
 }
 
 # set window gaps and borders
-    default_border normal 3
-#    for_window [class=$my_browser_class] border pixel 3
-#    gaps inner 10
+    for_window [all] border pixel 1
+    gaps inner 5
+    gaps outer 0
 
 # border and title bar colors
     # class                 border  backgr. text    indicator child_border
-    client.focused          #4c7899 #222222 #eeeeee #484e50   #222222
+    client.focused          #4c7899 #222222 #eeeeee #484e50   #4c7899
     client.focused_inactive #333333 #5f676a #eeeeee #292d2e   #222222
     client.unfocused        #333333 #222222 #888888 #292d2e   #222222
     client.urgent           #2f343a #900000 #eeeeee #900000   #900000
