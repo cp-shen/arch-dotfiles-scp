@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun enable-socks5-proxy ()
-  (interactive)
+;;  (interactive)
   (progn
     (setq socks-noproxy '("127.0.0.1"))
     (setq socks-server '("Default server" "127.0.0.1" 7891 5))
