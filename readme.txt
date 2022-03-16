@@ -4,6 +4,7 @@ Configuration files for:
   mpv        (video and audio player)
   neovim     (text editor)
   ranger     (CLI file manager)
+  emacs      (software IDE, org-mode for note-taking)
   git        (version control tool)
   .scripts/  (some useful shell scripts)
   zsh        (shell)
