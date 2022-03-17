@@ -14,6 +14,7 @@
 (global-hl-line-mode 1)
 (global-display-line-numbers-mode)
 (setq-default truncate-lines t)
+(setq make-backup-files nil)
 
 ;;;;;;;;;;;;;;;;
 ;; font setting

@@ -8,9 +8,11 @@
   '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-;; packages to install by user
+;; packages to install by user, in alphabet order
 (setq package-selected-packages '(
-  evil
+   evil
+   kaolin-themes
+;;  nord-theme
   org
 ))
 

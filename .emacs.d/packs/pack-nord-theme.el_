@@ -1,0 +1,8 @@
+(if (not (package-installed-p 'nord-theme))
+  (display-warning 'pack-nord-theme "not satisfied")
+
+  ;; Configs:
+  (load-theme 'nord t)
+  )
+
+(provide 'pack-nord-theme)
