@@ -5,21 +5,29 @@
 ;; Set up package.el to work with MELPA
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+  '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
-(package-refresh-contents)
 
-;; Download Evil
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
+;; packages to install by user
+(setq package-selected-packages '(
+  evil
+  org
+))
 
-;; Enable Evil
-(require 'evil)
-(evil-mode 1)
+;; use this function to install packages
+(defun install-my-selected-packages()
+  (interactive)
+  (package-refresh-contents)
+  (package-install-selected-packages))
 
-;; Download org
-(unless (package-installed-p 'org)
-  (package-install 'org))
+;; load all my package configs
+
+(add-to-list 'load-path "~/.emacs.d/packs")
+
+(mapc (lambda (name)
+        (require (intern (file-name-sans-extension name))))
+      (directory-files "~/.emacs.d/packs" nil "\\.el$"))
+
 
 (provide 'module-packs)
 ;;; module-packs.el ends here
