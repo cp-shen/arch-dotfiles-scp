@@ -17,6 +17,7 @@ alias gvim="nvim-qt --no-ext-tabline"
 alias i3exit="i3-msg exit"
 alias l="ls -hlF --color=auto"
 alias la="ls -ahlF --color=auto"
+alias less=less -R
 alias mkd="mkdir -p"
 alias nv="nvim"
 alias psuser="ps -F -u $USER"
@@ -87,6 +88,6 @@ export FZF_ALT_C_COMMAND='fd --hidden -E ".cache" -E ".git" -E "tags" -td -- . $
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ]   && source /usr/share/fzf/completion.zsh
 
-# colored man page (disabled: using grml config)
-# export MANPAGER="less -R --use-color -Dd+r -Du+g"
+# colored man page 
+export MANPAGER="less -R --use-color -Dd+r -Du+g"
 
