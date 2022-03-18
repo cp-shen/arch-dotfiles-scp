@@ -83,7 +83,7 @@ setopt PUSHD_SILENT
 
 
 # enable fzf zsh integration
-export FZF_DEFAULT_COMMAND='fd --hidden -E ".cache" -E ".git" -E "tags" -tf -td -- . $HOME'
+export FZF_DEFAULT_COMMAND='fd --hidden -E ".cache" -E ".git" -E "tags" -tf -td -- . ./'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND='fd --hidden -E ".cache" -E ".git" -E "tags" -td -- . $HOME'
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
