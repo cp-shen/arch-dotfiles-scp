@@ -26,6 +26,7 @@ alias ran="ranger"
 alias rm="rm -i"
 # alias sou="source"
 alias szshrc="source ~/.zshrc"
+alias temacs="TERM=xterm-direct emacs -nw"
 
 
 # functions to open search in archwiki and arch manual

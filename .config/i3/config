@@ -17,14 +17,15 @@
     set $my_browser_class  "(?i)firefox"
     set $my_terminal       kitty
     set $my_terminal_class "(?i)kitty"
-    set $my_editor         kitty emacs -nw
+    set $my_editor         emacs
     set $my_editor_class   "(?i)emacs"
     set $my_file_manager   kitty ranger
-    set $my_music_player   kitty ranger ~/Music/
+    set $my_music_player   kitty -d ~/Music/
 
 # workspace rules
-    # assign [class=$my_terminal_class] $ws1
-    # assign [class=$my_browser_class] $ws2
+    # assign [class=$my_terminal_class] number $ws1
+    # assign [class=$my_browser_class]  number $ws2
+    assign [class="(?i)mpv"]            number $ws3
 
 # application laucher mode
     bindsym $mod+o mode "launcher"
