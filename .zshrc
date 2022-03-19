@@ -24,7 +24,7 @@ alias psuser="ps -F -u $USER"
 alias psroot="ps -F -u root"
 alias ran="ranger"
 alias rm="rm -i"
-# alias sou="source"
+alias sou="source"
 alias szshrc="source ~/.zshrc"
 alias temacs="TERM=xterm-direct emacs -nw"
 
@@ -45,11 +45,18 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+# enable git prompt
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+zstyle ':vcs_info:git:*' formats '%F{240}(%b)%f'
+zstyle ':vcs_info:*' enable git
 
 # setup my custom prompt theme
 prompt_mytheme_setup() {
     PS1="%F{red}%B%(?..[%?] )%b%f%n@%F{magenta}%5d%f %# "
-    RPS1=""
+    RPS1=\$vcs_info_msg_0_
 }
 prompt_themes+=( mytheme )
 prompt mytheme
