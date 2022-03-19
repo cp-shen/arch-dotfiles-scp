@@ -1,5 +1,7 @@
 typeset -U PATH path
-path=("$HOME/.scripts" "$path[@]")
-export PATH
+path=("$path[@]" "$HOME/.local/bin")
+path=("$path[@]" "$HOME/.scripts")
+path=("$path[@]" "$(yarn global bin)")
 
+export PATH
 export EDITOR=nvim
