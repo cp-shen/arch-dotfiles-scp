@@ -48,7 +48,7 @@ promptinit
 
 # setup my custom prompt theme
 prompt_mytheme_setup() {
-    PS1="%F{red}%B%(?..[%?] )%b%f%n@%F{magenta}%d%f %# "
+    PS1="%F{red}%B%(?..[%?] )%b%f%n@%F{magenta}%5d%f %# "
     RPS1=""
 }
 prompt_themes+=( mytheme )
