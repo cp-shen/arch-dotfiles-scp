@@ -1,6 +1,7 @@
 typeset -U PATH path
 path=("$path[@]" "$HOME/.local/bin")
 path=("$path[@]" "$HOME/.scripts")
+path=("$path[@]" "$HOME/.emacs.d/bin")
 path=("$path[@]" "$(yarn global bin)")
 
 export PATH
