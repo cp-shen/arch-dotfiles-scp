@@ -40,7 +40,9 @@
 
 # application shortcuts
     # bindsym --release $mod+Shift+Control+q exec xkill
-    bindsym $mod+Return workspace number $ws1 ; exec $my_terminal
+
+# quick switch to terminal
+    bindsym $mod+Return workspace number $ws1
 
 # i3 management
     # reload the configuration file
