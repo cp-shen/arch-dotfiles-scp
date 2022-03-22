@@ -1,3 +1,5 @@
+fpath=(~/.zsh/functions $fpath)
+
 # enable fish-like auto suggestion and syntax highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -17,7 +19,7 @@ alias gvim="nvim-qt --no-ext-tabline"
 alias i3exit="i3-msg exit"
 alias l="ls -hlF --color=auto"
 alias la="ls -ahlF --color=auto"
-alias less=less -R
+alias less="less -R --use-color"
 alias mkd="mkdir -p"
 alias nv="nvim"
 alias psuser="ps -F -u $USER"
