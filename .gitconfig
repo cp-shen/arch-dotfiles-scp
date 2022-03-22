@@ -23,3 +23,5 @@
     lg = !"git lg1"
     mt = mergetool
     st = status
+[init]
+	defaultBranch = master
