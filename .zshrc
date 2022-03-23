@@ -33,13 +33,13 @@ alias temacs="TERM=xterm-direct emacs -nw"
 
 # functions to open search in archwiki and arch manual
 archwiki(){ 
-  firefox "https://wiki.archlinux.org/index.php?search=$1"
+  xdg-open "https://wiki.archlinux.org/index.php?search=$1" &!
 }
 archman(){
-  firefox "https://man.archlinux.org/search?lang=en&q=$1"
+  xdg-open "https://man.archlinux.org/search?lang=en&q=$1" &!
 }
 archfindpkg(){
-  firefox "https://archlinux.org/packages/?name=$1"
+  xdg-open "https://archlinux.org/packages/?q=$1" &!
 }
 
 # enable prompt theme and completion
@@ -101,3 +101,9 @@ export FZF_ALT_C_COMMAND='fd --no-ignore --hidden -E ".cache" -E ".git" -E "tags
 # colored man page 
 export MANPAGER="less -R --use-color -Dd+r -Du+g"
 
+# proxy
+use-http-proxy() {
+  export http_proxy=http://127.0.0.1:7890
+  export https_proxy=$http_proxy
+  export no_proxy="localhost,127.0.0.1"
+}
