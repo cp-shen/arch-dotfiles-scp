@@ -1,8 +1,10 @@
 typeset -U PATH path
-path=("$path[@]" "$HOME/.local/bin")
 path=("$path[@]" "$HOME/.scripts")
+path=("$path[@]" "$HOME/.local/bin")
 path=("$path[@]" "$HOME/.emacs.d/bin")
-path=("$path[@]" "$(yarn global bin)")
+path=("$path[@]" "$HOME/.ghcup/bin")
+path=("$path[@]" "$HOME/.cabal/bin")
+path=("$path[@]" "$HOME/.cargo/bin")
 
 export PATH
 export EDITOR=nvim
