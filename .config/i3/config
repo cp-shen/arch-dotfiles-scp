@@ -160,9 +160,9 @@
 
 # i3bar settings
 bar {
-    position top
-    mode dock
-    modifier $Mod+Control
+    position bottom
+    mode hide
+    modifier $Mod
     font pango:Fira Code 10
     status_command i3blocks
     tray_output none
