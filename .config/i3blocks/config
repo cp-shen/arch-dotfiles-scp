@@ -16,13 +16,43 @@ separator_block_width=15
 # command=xdg-open "$website"
 # color=#f12711
 
-[greetings]
-color=#f5af19
-command=zsh -c 'print -P "hello, %n@%m :)" '
-interval=once
+# [greetings]
+# color=#f5af19
+# command=zsh -c 'print -P "hello, %n@%m :)" '
+# interval=once
+
+[volume-pulseaudio]
+command=~/.scripts/i3blocks/volume-pulseaudio
+interval=persist
+SUBSCRIBE=1
+USE_ALSA_NAME=1
+# if you prefer updating only when signaled
+# [volume-pulseaudio]
+# command=~/.scripts/i3blocks/volume-pulseaudio
+# interval=once
+# signal=1
+# USE_ALSA_NAME=1
+
+[cpu_usage]
+command=~/.scripts/i3blocks/cpu_usage
+interval=10
+LABEL=CPU 
+# min_width=CPU: 100.00%
+T_WARN=50
+T_CRIT=80
+DECIMALS=2
+COLOR_NORMAL=#EBDBB2
+COLOR_WARN=#FFFC00
+COLOR_CRIT=#FF0000
+
+[memory]
+command=~/.scripts/i3blocks/memory
+label=MEM 
+interval=30
 
 [time]
-color=#cccccc
+# color=#cccccc
+color=#EBDBB2
 # command=date '+%Y-%m-%d %H:%M:%S'
 command=date '+%Y-%m-%d %H:%M'
 interval=30
