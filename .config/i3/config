@@ -6,7 +6,7 @@
     set $ws2        2: browser
     set $ws3        3: music/v
     set $ws4        4: monitor
-    set $ws5        5
+    set $ws5        5: download
     set $ws6        6
     set $ws7        7
     set $ws8        8
