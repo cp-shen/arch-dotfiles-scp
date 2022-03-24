@@ -5,7 +5,7 @@
     set $ws1        1: terminal
     set $ws2        2: browser
     set $ws3        3: music/v
-    set $ws4        4: others
+    set $ws4        4: monitor
     set $ws5        5
     set $ws6        6
     set $ws7        7
@@ -21,21 +21,25 @@
     set $my_editor_class   "(?i)emacs"
     set $my_file_manager   kitty ranger
     set $my_music_player   kitty -d ~/Music/
+    set $my_sys_monitor    kitty glances
 
 # workspace rules
     # assign [class=$my_terminal_class] number $ws1
     # assign [class=$my_browser_class]  number $ws2
     assign [class="(?i)mpv"]            number $ws3
-    assign [class="(?i)emacs"]            number $ws10
+    assign [class="(?i)emacs"]          number $ws10
 
 # application laucher mode
     bindsym $mod+o mode "launcher"
     mode "launcher" {
         bindsym t workspace number $ws1 ; exec $my_terminal ; $md
-        bindsym e workspace number $ws10; exec $my_editor ; $md
         bindsym f workspace number $ws1 ; exec $my_file_manager ; $md
         bindsym w workspace number $ws2 ; exec $my_browser ; $md 
         bindsym m workspace number $ws3 ; exec $my_music_player ; $md
+        bindsym g workspace number $ws4 ; exec $my_sys_monitor ; $md
+        bindsym e workspace number $ws10; exec $my_editor ; $md
+
+        bindsym Return exec $my_terminal ; $md
         bindsym Escape $md
     }
 
@@ -164,13 +168,15 @@
 
 # i3bar settings
 bar {
-    position bottom
+    binding_mode_indicator yes
+    font pango:Fira Code 10
     mode hide
     modifier $Mod
-    font pango:Fira Code 10
+    position bottom
     status_command i3blocks
     tray_output none
-    binding_mode_indicator yes
+    workspace_min_width 80
+
     colors {
         # background #000000
         background #1e1e1e
@@ -204,6 +210,7 @@ bar {
 # startup applications
     exec --no-startup-id $my_terminal # auto spawn a terminal
     exec --no-startup-id $my_browser archwiki.org # auto open archwiki
+    exec --no-startup-id $my_sys_monitor
 
     exec --no-startup-id unclutter # hide mouse cursor
     exec --no-startup-id xset s off -dpms # turn of screen saver and dpms
