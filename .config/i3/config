@@ -63,6 +63,9 @@
     bindsym XF86AudioMute        exec --no-startup-id pulsemixer --toggle-mute
     bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
     bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
+    bindsym $mod+XF86AudioMute        exec --no-startup-id pulsemixer --toggle-mute
+    bindsym $mod+XF86AudioLowerVolume exec --no-startup-id pulsemixer --change-volume -5
+    bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
 
 # Font setting
     font pango:Fira Code 10
