@@ -28,7 +28,7 @@ alias ran="ranger"
 alias rm="rm -i"
 alias sou="source"
 alias szshrc="source ~/.zshrc"
-alias ec="emacsclient -c &!"
+alias ec="emacsclient -c"
 alias et="TERM=xterm-direct emacsclient -t"
 
 
