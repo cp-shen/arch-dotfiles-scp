@@ -9,7 +9,7 @@
 (setq user-full-name "Cp Shen"
       user-mail-address "scp@archlinuxscp.xyz")
 
-(setq doom-font (font-spec :family "Fira Code" :size 15))
+(setq doom-font (font-spec :family "Fira Code" :size 16))
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
@@ -75,3 +75,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+(setq fancy-splash-image nil)
