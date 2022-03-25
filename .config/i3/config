@@ -174,7 +174,7 @@ bar {
     modifier $Mod
     position bottom
     status_command i3blocks
-    tray_output none
+    tray_output primary
     workspace_min_width 80
 
     colors {
@@ -193,11 +193,12 @@ bar {
 }
 
 # set window gaps and borders
-    for_window [all] border pixel 2
+    for_window [all] border pixel 0
+    # smart_borders on
+
     gaps inner 5
     gaps outer 0
     smart_gaps on
-    smart_borders on
 
 # border and title bar colors
     # class                 border  backgr. text    indicator child_border
@@ -208,7 +209,7 @@ bar {
     client.placeholder      #000000 #0c0c0c #eeeeee #000000   #0c0c0c
 
 # startup applications
-    exec --no-startup-id $my_terminal # auto spawn a terminal
+    # exec --no-startup-id $my_terminal # auto spawn a terminal
     exec --no-startup-id $my_browser archwiki.org # auto open archwiki
     exec --no-startup-id $my_sys_monitor
 
@@ -216,6 +217,7 @@ bar {
     exec --no-startup-id xset s off -dpms # turn of screen saver and dpms
     exec --no-startup-id picom # launch compositor
     exec --no-startup-id nitrogen --restore # draw wallpapaer
+    exec --no-startup-id nm-applet
 
 # auto switch and focus
     focus_on_window_activation focus
