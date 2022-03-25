@@ -14,13 +14,15 @@ bindkey '^[[Z' reverse-menu-complete # enable shift-tab
 
 
 # aliases in alphabet order
+alias ec="emacsclient -c"
+alias et="TERM=xterm-direct emacsclient -t"
 alias du="du -h"
 alias gvim="nvim-qt --no-ext-tabline"
 alias i3exit="i3-msg exit"
 alias l="ls -hlF --color=auto"
 alias la="ls -ahlF --color=auto"
 alias less="less -R --use-color"
-alias mkd="mkdir -p"
+alias m="mkdir -p"
 alias nv="nvim"
 alias psuser="ps -F -u $USER"
 alias psroot="ps -F -u root"
@@ -28,8 +30,7 @@ alias ran="ranger"
 alias rm="rm -i"
 alias sou="source"
 alias szshrc="source ~/.zshrc"
-alias ec="emacsclient -c"
-alias et="TERM=xterm-direct emacsclient -t"
+alias xo="xdg-open"
 
 
 # functions to open search in archwiki and arch manual
