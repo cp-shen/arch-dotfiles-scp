@@ -42,7 +42,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
-(setq org-log-done 'time)
+
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -76,5 +76,18 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
 (setq fancy-splash-image nil)
+
+(after! evil
+  (setq evil-want-fine-undo t)
+  (setq evil-ex-substitute-global t))
+
+(after! org
+  (setq org-startup-folded 'content)
+  (setq org-cycle-emulate-tab nil)
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-agenda-log-mode-items '(closed clock))
+  (setq org-log-into-drawer t)
+  (setq org-log-done 'time))
+
+(map! :g "C-s" #'save-buffer)
