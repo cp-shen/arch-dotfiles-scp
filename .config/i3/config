@@ -32,14 +32,13 @@
 # application laucher mode
     bindsym $mod+o mode "launcher"
     mode "launcher" {
-        bindsym t workspace number $ws1 ; exec $my_terminal ; $md
-        bindsym f workspace number $ws1 ; exec $my_file_manager ; $md
-        bindsym w workspace number $ws2 ; exec $my_browser ; $md 
-        bindsym m workspace number $ws3 ; exec $my_music_player ; $md
-        bindsym g workspace number $ws4 ; exec $my_sys_monitor ; $md
-        bindsym e workspace number $ws10; exec $my_editor ; $md
+        bindsym t workspace number $ws1  ; exec $my_terminal     ; $md
+        bindsym f workspace number $ws1  ; exec $my_file_manager ; $md
+        bindsym w workspace number $ws2  ; exec $my_browser      ; $md
+        bindsym m workspace number $ws3  ; exec $my_music_player ; $md
+        bindsym g workspace number $ws4  ; exec $my_sys_monitor  ; $md
+        bindsym e workspace number $ws10 ; exec $my_editor       ; $md
 
-        bindsym Return exec $my_terminal ; $md
         bindsym Escape $md
     }
 
@@ -48,6 +47,7 @@
 
 # quick switch to terminal
     bindsym $mod+Return workspace number $ws1
+    bindsym $mod+Shift+Return exec $my_terminal
 
 # i3 management
     # reload the configuration file
@@ -118,6 +118,9 @@
 # workspace management
     bindsym $mod+n workspace next_on_output
     bindsym $mod+Shift+n workspace prev_on_output
+    bindsym $mod+period workspace next_on_output
+    bindsym $mod+comma workspace prev_on_output
+
     bindsym $mod+p workspace back_and_forth
     bindsym $mod+Shift+s move workspace to output right
 
