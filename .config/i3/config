@@ -59,7 +59,6 @@
 
 # layout management
     # change container layout (stacked, tabbed, toggle split)
-    #bindsym $mod+s layout stacking
     bindsym $mod+Shift+w layout tabbed
     bindsym $mod+Shift+x layout toggle split
 
@@ -116,10 +115,12 @@
     #bindsym $mod+d focus child
 
 # workspace management
-    bindsym $mod+n workspace next_on_output
-    bindsym $mod+Shift+n workspace prev_on_output
-    bindsym $mod+period workspace next_on_output
-    bindsym $mod+comma workspace prev_on_output
+    # bindsym $mod+n workspace next_on_output
+    # bindsym $mod+Shift+n workspace prev_on_output
+    # bindsym $mod+period workspace next_on_output
+    # bindsym $mod+comma workspace prev_on_output
+    bindsym $mod+bracketleft  workspace prev_on_output
+    bindsym $mod+bracketright workspace next_on_output
 
     bindsym $mod+p workspace back_and_forth
     bindsym $mod+Shift+s move workspace to output right
