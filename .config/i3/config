@@ -212,9 +212,8 @@ bar {
     client.placeholder      #000000 #0c0c0c #eeeeee #000000   #0c0c0c
 
 # startup applications
-    # exec --no-startup-id $my_terminal # auto spawn a terminal
+    exec --no-startup-id $my_terminal # auto spawn a terminal
     exec --no-startup-id $my_browser archwiki.org # auto open archwiki
-    exec --no-startup-id $my_sys_monitor
 
     exec --no-startup-id unclutter # hide mouse cursor
     exec --no-startup-id xset s off -dpms # turn of screen saver and dpms
