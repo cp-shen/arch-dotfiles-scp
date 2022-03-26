@@ -4,8 +4,8 @@
     
     set $ws1        1: terminal
     set $ws2        2: browser
-    set $ws3        3: music/v
-    set $ws4        4: monitor
+    set $ws3        3: monitor 
+    set $ws4        4: music/v
     set $ws5        5: download
     set $ws6        6
     set $ws7        7
@@ -26,7 +26,7 @@
 # workspace rules
     # assign [class=$my_terminal_class] number $ws1
     # assign [class=$my_browser_class]  number $ws2
-    assign [class="(?i)mpv"]            number $ws3
+    assign [class="(?i)mpv"]            number $ws4
     assign [class="(?i)emacs"]          number $ws10
 
 # application laucher mode
@@ -35,8 +35,8 @@
         bindsym t workspace number $ws1  ; exec $my_terminal     ; $md
         bindsym f workspace number $ws1  ; exec $my_file_manager ; $md
         bindsym w workspace number $ws2  ; exec $my_browser      ; $md
-        bindsym m workspace number $ws3  ; exec $my_music_player ; $md
-        bindsym g workspace number $ws4  ; exec $my_sys_monitor  ; $md
+        bindsym g workspace number $ws3  ; exec $my_sys_monitor  ; $md
+        bindsym m workspace number $ws4  ; exec $my_music_player ; $md
         bindsym e workspace number $ws10 ; exec $my_editor       ; $md
 
         bindsym Escape $md
