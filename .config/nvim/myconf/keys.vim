@@ -6,6 +6,9 @@ nnoremap zz za
 "set key to show full path
 nnoremap <A-3> :echo expand('%:p')<CR>
 
+"save file
+nnoremap <C-s> :w<CR>
+
 "set Leader key
 map <Space> <Leader>
 
