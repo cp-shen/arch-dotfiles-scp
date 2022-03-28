@@ -30,6 +30,8 @@ alias ran="ranger"
 alias rm="rm -i"
 alias sou="source"
 alias szshrc="source ~/.zshrc"
+alias t="touch"
+alias which="which -as"
 alias xo="xdg-open"
 
 
