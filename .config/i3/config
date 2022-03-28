@@ -3,9 +3,9 @@
     set $md mode "default"
     
     set $ws1        1: terminal
-    set $ws2        2: browser
-    set $ws3        3: monitor 
-    set $ws4        4: music/v
+    set $ws2        2: browsers
+    set $ws3        3: monitors
+    set $ws4        4: music/vi
     set $ws5        5: download
     set $ws6        6
     set $ws7        7
@@ -178,8 +178,10 @@ bar {
     modifier $Mod
     position bottom
     status_command i3blocks
+    strip_workspace_numbers no
+    strip_workspace_name no
     tray_output primary
-    workspace_min_width 80
+    workspace_min_width 0
 
     colors {
         # background #000000
