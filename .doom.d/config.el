@@ -90,6 +90,7 @@
   (setq org-agenda-start-day "-7d")
   (setq org-agenda-span 15)
   (setq org-agenda-show-current-time-in-grid nil)
+  (setq org-agenda-use-time-grid nil)
   (setq org-agenda-log-mode-items '(closed clock))
   (setq org-log-into-drawer t)
   (setq org-log-done 'time))
