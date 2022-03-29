@@ -53,4 +53,15 @@ fi
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 # exec xterm -geometry 80x66+0+0 -name login
+
+unclutter &
+nm-applet --sm-disable &
+picom &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+ --expand true --width 10 --transparent true --tint 0x5f5f5f --height 18 &
+
+xsetroot -cursor_name left_ptr
+xset s off -dpms
+nitrogen --restore
+
 exec $HOME/.xmonad/xmonad-x86_64-linux

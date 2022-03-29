@@ -218,11 +218,11 @@ bar {
     exec --no-startup-id $my_terminal # auto spawn a terminal
     exec --no-startup-id $my_browser archwiki.org # auto open archwiki
 
-    exec --no-startup-id unclutter # hide mouse cursor
-    exec --no-startup-id xset s off -dpms # turn of screen saver and dpms
-    exec --no-startup-id picom # launch compositor
-    exec --no-startup-id nitrogen --restore # draw wallpapaer
-    exec --no-startup-id nm-applet
+#   exec --no-startup-id unclutter # hide mouse cursor
+#   exec --no-startup-id xset s off -dpms # turn of screen saver and dpms
+#   exec --no-startup-id picom # launch compositor
+#   exec --no-startup-id nitrogen --restore # draw wallpapaer
+#   exec --no-startup-id nm-applet
 
 # auto switch and focus
     focus_on_window_activation focus
