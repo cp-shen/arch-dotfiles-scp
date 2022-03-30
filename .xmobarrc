@@ -1,8 +1,8 @@
 Config { overrideRedirect = False
        , font     = "xft:iosevka-9"
-       , bgColor  = "#444444"
-       , fgColor  = "#f8f8f2"
-       , position = TopW L 90
+       , bgColor  = "#1e2127"
+       , fgColor  = "#abb2bf"
+       , position = TopSize L 95 18
        , commands = [ Run Weather "EGPF"
                         [ "--template", "<weather> <tempC>°C"
                         , "-L", "0"

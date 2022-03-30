@@ -58,7 +58,7 @@ unclutter &
 nm-applet --sm-disable &
 picom &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true \
- --expand true --width 10 --transparent true --tint 0x5f5f5f --height 18 &
+ --expand true --width 5 --transparent true --alpha 0 --tint 0x1e2127 --height 18 &
 
 xsetroot -cursor_name left_ptr
 xset s off -dpms
