@@ -14,6 +14,7 @@ bindkey '^[[Z' reverse-menu-complete # enable shift-tab
 
 
 # aliases in alphabet order
+alias ala="alacritty"
 alias ec="emacsclient -c"
 alias et="TERM=xterm-direct emacsclient -t"
 alias du="du -h"
