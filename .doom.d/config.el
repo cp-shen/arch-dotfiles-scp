@@ -119,3 +119,8 @@
 ;                 org-clock-heading)))))
 
 (map! :g "C-s" #'save-buffer)
+
+
+(map! (:when (featurep! :ui workspaces)
+       :n "C-S-t"   #'+workspace/new
+       :n "C-t" #'+workspace/display))
