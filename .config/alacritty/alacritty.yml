@@ -1,4 +1,6 @@
 window:
+  title: Alacritty
+  dynamic_title: false
   opacity: 1.0
 
 font:
