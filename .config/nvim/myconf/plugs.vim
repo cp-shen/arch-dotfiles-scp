@@ -21,6 +21,10 @@ function! ShowCurTime()
     return strftime('%H:%M')
 endfunction
 
+Plug 'navarasu/onedark.nvim'
+let g:onedark_config = {
+    \ 'style': 'dark',
+\}
 
 call plug#end()
 

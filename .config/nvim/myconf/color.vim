@@ -2,7 +2,8 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
-colorscheme spacegray
+" colorscheme spacegray
+colorscheme onedark
 
 " hi CocErrorSign guifg=#AF5F5F
 " hi Todo ctermbg=52 ctermfg=12 guibg=NONE guifg=#A57A9E cterm=underline gui=None
