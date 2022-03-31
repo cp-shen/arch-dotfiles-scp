@@ -59,10 +59,10 @@ xset s off -dpms
 nitrogen --restore
 
 unclutter &
-nm-applet --sm-disable &
 picom &
-trayer --edge top --align right --SetDockType true --SetPartialStrut true \
- --expand true --width 5 --transparent true --alpha 0 --tint 0x1e2127 --height 22 &
+# nm-applet --sm-disable &
+# trayer --edge top --align right --SetDockType true --SetPartialStrut true \
+#  --expand true --width 5 --transparent true --alpha 0 --tint 0x1e2127 --height 22 &
 
 alacritty &
 exec $HOME/.xmonad/xmonad-x86_64-linux

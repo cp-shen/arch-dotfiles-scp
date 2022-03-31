@@ -4,7 +4,7 @@ Config {
        , overrideRedirect = False
        , bgColor  = "#1e2127"
        , fgColor  = "#abb2bf"
-       , position = TopSize L 95 22
+       , position = Top
        , commands = [ Run Cpu
                         [ "--Low", "1"
                         , "--High", "50"
