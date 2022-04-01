@@ -102,7 +102,8 @@
 ;;
 (map! :g "C-s" #'save-buffer)
 (map! (:when (featurep! :ui workspaces)
-       :n "C-S-t"   #'+workspace/new
-       :n "C-t" #'+workspace/display))
+       :n "C-S-t" #'+workspace/new
+       :n "M-t"   #'+workspace/display
+       :n "C-t"   #'+workspace/display))
 (map! (:when (and (featurep! :tools lsp) (not (featurep! :tools lsp +eglot)))
        :leader (:prefix "c" :desc "LSP lens toggle" "L" #'lsp-lens-mode)))
