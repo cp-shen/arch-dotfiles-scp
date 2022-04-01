@@ -96,7 +96,7 @@
   (setq org-log-done 'time))
 
 (after! lsp-mode
-  (setq lsp-lens-enable nil))
+  (setq lsp-lens-enable t))
 
 ;; keybindings -----------------
 ;;
@@ -104,3 +104,5 @@
 (map! (:when (featurep! :ui workspaces)
        :n "C-S-t"   #'+workspace/new
        :n "C-t" #'+workspace/display))
+(map! (:when (and (featurep! :tools lsp) (not (featurep! :tools lsp +eglot)))
+       :leader (:prefix "c" :desc "LSP lens toggle" "L" #'lsp-lens-mode)))
