@@ -83,6 +83,15 @@
   (setq evil-ex-substitute-global t))
 
 (after! org
+  (setq
+   org-highest-priority ?A
+   org-default-priority ?B
+   org-lowest-priority ?D)
+  (setq org-priority-faces
+   '((?A . error)
+     (?B . warning)
+     (?C . success)
+     (?D . success)))
   (setq org-startup-folded 'content)
   (setq org-cycle-emulate-tab nil)
   (setq org-agenda-start-with-log-mode t)
@@ -102,6 +111,8 @@
 ;;
 (map! :g "C-s" #'save-buffer)
 (map! (:when (featurep! :ui workspaces)
+       :n "M-["   #'+workspace:switch-previous
+       :n "M-]"   #'+workspace:switch-next
        :n "C-S-t" #'+workspace/new
        :n "M-t"   #'+workspace/display
        :n "C-t"   #'+workspace/display))
